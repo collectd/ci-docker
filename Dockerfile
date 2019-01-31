@@ -1,2 +1,69 @@
-FROM alpine
-CMD ["echo", "placeholder image"]
+FROM debian:stretch
+
+ADD debian.sh /debian.sh
+
+ENV EXTRA_PACKAGES="\
+  default-jdk \
+  default-libmysqlclient-dev \
+  iptables-dev \
+  javahelper \
+  libatasmart-dev \
+  libcap-dev \
+  libcurl4-gnutls-dev \
+  libdbi-dev \
+  libdpdk-dev \
+  libesmtp-dev \
+  libganglia1-dev \
+  libgcrypt20-dev \
+  libglib2.0-dev \
+  libgps-dev \
+  libhiredis-dev \
+  libi2c-dev \
+  libldap2-dev \
+  libltdl-dev \
+  liblua5.1-0-dev \
+  liblua5.2-dev \
+  liblua50-dev \
+  liblvm2-dev \
+  libmemcached-dev \
+  libmicrohttpd-dev \
+  libmnl-dev \
+  libmodbus-dev \
+  libmongoc-dev \
+  libmosquitto-dev \
+  libnotify-dev \
+  libopenipmi-dev \
+  liboping-dev \
+  libow-dev \
+  libpcap-dev \
+  libperl-dev \
+  libpq-dev \
+  libprotobuf-c-dev \
+  libqpid-proton8-dev \
+  librabbitmq-dev \
+  librdkafka-dev \
+  libriemann-client-dev \
+  librrd-dev \
+  libsensors4-dev \
+  libsigrok-dev \
+  libsnmp-dev \
+  libssl-dev \
+  libstatgrab-dev \
+  libtokyocabinet-dev \
+  libtokyotyrant-dev \
+  libudev-dev \
+  libupsclient-dev \
+  libvarnishapi-dev \
+  libvirt-dev \
+  libxen-dev \
+  libxml2-dev \
+  libyajl-dev \
+  perl \
+  protobuf-c-compiler \
+  protobuf-compiler \
+  python-dev \
+  python3-dev \
+  xfslibs-dev \
+"
+
+RUN /debian.sh
