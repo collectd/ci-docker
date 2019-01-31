@@ -1,3 +1,5 @@
+language: generic
+
 env:
   global:
   - secure: Nc2O/0KfD1F46i11vYrS3bOu9U3cTpYNMykYwlgWWgHBQdhKtjnEtqvF9DqYXPsslje7UQjaGZNmWexHhYp+9hpua0voVZGicRs4aSh49aZXF+ednFlJ3ndxoExsQRHw0BxbXpz1QnpMAnYZ3OYXDNqWsjr2s3V2Va2FGd6Z91RUIucpxed5xpsboncFv+8t3AiuB2DTuuWfe1dGle9cj0SxM9GRt/7OrW4FoNMFnr1cjMPKkeB0+2MbC/g6Ags1STBJarCp4eHeqBFnhsChG02pt1nf8ZFkf4ihqkr6KtB8mIMARfX6UI5CEsDMxyu+EINoJtzHB7RE0cqVHb/e5873kOM91b9uf2OLoI9bSwpj4mct5pk4bx86AfrCLi7n00QjAZx4O2+F7SsxbT9zlBbh7ljYXl8Qb6a6TPUeviZc2FzP5ZAx+a1yBmQiria4jV07BR9pjrQQYhxo31yzC6f4tT+FseRDIDLcz0O6v/sjCYq7ywA10GSWRoEHd9gK85Zs4inOZyVV2adGaxAXKD2vuJWSNMvK8lVXTbjeWFqvS8LQnIUU3dQ/em9+AmlqIdfHQU0ehGemkqpdsZrLRiga7VU4oSXnD1dxVhCueFoberSLNg72t8YFRnFaURpZEaJUpB+8L4maJpYfS03wjLkrdAEQBIm8THyoOic82gM=
@@ -7,4 +9,4 @@ services:
 - docker
 
 script:
-- travis-ci.sh
+- ./travis-ci.sh
