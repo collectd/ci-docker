@@ -1,2 +1,65 @@
-FROM alpine
-CMD ["echo", "placeholder image"]
+FROM debian:wheezy
+
+ADD debian.sh /debian.sh
+
+ENV EXTRA_PACKAGES="\
+  default-jdk \
+  iproute-dev \
+  iptables-dev \
+  javahelper \
+  libatasmart-dev \
+  libcap-dev \
+  libcurl4-gnutls-dev \
+  libdbi0-dev \
+  libesmtp-dev \
+  libganglia1-dev \
+  libgcrypt11-dev \
+  libglib2.0-dev \
+  libgps-dev \
+  libhal-dev \
+  libhiredis-dev \
+  libi2c-dev \
+  libldap2-dev \
+  libltdl-dev \
+  liblua5.1-0-dev \
+  liblua5.2-dev \
+  liblua50-dev \
+  liblvm2-dev \
+  libmemcached-dev \
+  libmicrohttpd-dev \
+  libmnl-dev \
+  libmodbus-dev \
+  libmosquitto0-dev \
+  libmysqlclient-dev \
+  libnotify-dev \
+  libopenipmi-dev \
+  liboping-dev \
+  libow-dev \
+  libpcap-dev \
+  libperl-dev \
+  libpq-dev \
+  libprotobuf-c0-dev \
+  librabbitmq-dev \
+  librrd-dev \
+  libsensors4-dev \
+  libsnmp-dev \
+  libssl-dev \
+  libstatgrab-dev \
+  libtokyocabinet-dev \
+  libtokyotyrant-dev \
+  libudev-dev \
+  libupsclient1-dev \
+  libvarnish-dev \
+  libvirt-dev \
+  libxen-dev \
+  libxml2-dev \
+  libyajl-dev \
+  openjdk-7-jre-headless \
+  perl \
+  protobuf-c-compiler \
+  python-dev \
+  python3-dev \
+  xfslibs-dev \
+"
+
+RUN /debian.sh
