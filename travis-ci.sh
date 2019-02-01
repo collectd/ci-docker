@@ -10,7 +10,7 @@ if [ ! -z "${TRAVIS_BRANCH}" ]; then
   docker build -t "${SLUG}" .
   docker inspect "${SLUG}"
   docker history "${SLUG}"
-  echo "${DOCKER_PASSWORD}" | docker login -u "${DOCKER_LOGIN}" --password-stdin
+  echo "${DOCKER_PASSWORD}" | docker login --username "${DOCKER_LOGIN}" --password-stdin
   docker push "${SLUG}"
 else
   echo 'no $TRAVIS_BRANCH defined, exiting'
