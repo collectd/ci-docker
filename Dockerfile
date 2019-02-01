@@ -1,4 +1,4 @@
-FROM ubuntu:xenial
+FROM i386/ubuntu:xenial
 
 ADD debian.sh /debian.sh
 
