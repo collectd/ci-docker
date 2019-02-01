@@ -1,4 +1,4 @@
-FROM ubuntu:trusty
+FROM i386/ubuntu:trusty
 
 ADD debian.sh /debian.sh
 
