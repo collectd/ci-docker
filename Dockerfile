@@ -1,4 +1,4 @@
-FROM debian:stretch
+FROM i386/debian:stretch
 
 ADD debian.sh /debian.sh
 
