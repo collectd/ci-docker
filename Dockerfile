@@ -1,4 +1,4 @@
-FROM debian:wheezy
+FROM i386/debian:wheezy
 
 ADD debian.sh /debian.sh
 
