@@ -1,4 +1,4 @@
-FROM debian:jessie
+FROM i386/debian:jessie
 
 ADD debian.sh /debian.sh
 
