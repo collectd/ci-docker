@@ -1,4 +1,4 @@
-#!/bin/sh -xe
+#!/bin/sh -e
 
 echo "### Checking whether all known working plugins on this platform have been built ###"
 STATUS=0

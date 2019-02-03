@@ -1,5 +1,6 @@
-#!/bin/sh
+#!/bin/sh -e
 
-set -xe
-
-for shellscript in *.sh; do checkbashisms -n $shellscript || exit 1; done
+for shellscript in *.sh; do
+  echo "running checkbashisms on ${shellscript}"
+  checkbashisms -n "${shellscript}" || exit 1
+done
