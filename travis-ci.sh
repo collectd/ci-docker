@@ -7,10 +7,10 @@ fi
 
 if [ ! -z "${TRAVIS_BRANCH}" ]; then
   SLUG="collectd/ci:${TRAVIS_BRANCH}"
-  docker build -t "${SLUG}" .
+  docker build --pull -t "${SLUG}" .
   docker inspect "${SLUG}"
   docker history "${SLUG}"
-  echo "${DOCKER_PASSWORD}" | docker login -u "${DOCKER_LOGIN}" --password-stdin
+  echo "${DOCKER_PASSWORD}" | docker login --username "${DOCKER_LOGIN}" --password-stdin
   docker push "${SLUG}"
 else
   echo 'no $TRAVIS_BRANCH defined, exiting'
