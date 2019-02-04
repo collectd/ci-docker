@@ -26,6 +26,8 @@ COMMON_PACKAGES="\
   valgrind \
 "
 
+grep -q ^Fedora /etc/redhat-release && alias yum=dnf || true
+
 yum -y update
 
 yum -y install $COMMON_PACKAGES $EXTRA_PACKAGES
