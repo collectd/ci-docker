@@ -1,6 +1,7 @@
 FROM i386/debian:wheezy
 
 ADD debian.sh /debian.sh
+COPY /checks/*.sh /checks/
 
 ENV EXTRA_PACKAGES="\
   default-jdk \
@@ -60,6 +61,143 @@ ENV EXTRA_PACKAGES="\
   python-dev \
   python3-dev \
   xfslibs-dev \
+"
+
+ENV SUPPORTED_PLUGIN_LIST="\
+  libcollectdclient \
+  aggregation \
+  amqp \
+  apache \
+  apcups \
+  ascent \
+  barometer \
+  battery \
+  bind \
+  ceph \
+  cgroups \
+  chrony \
+  conntrack \
+  contextswitch \
+  cpu \
+  cpufreq \
+  csv \
+  curl \
+  curl_json \
+  curl_xml \
+  dbi \
+  df \
+  disk \
+  dns \
+  drbd \
+  email \
+  entropy \
+  ethstat \
+  exec \
+  fhcount \
+  filecount \
+  fscache \
+  gmond \
+  gps \
+  hddtemp \
+  hugepages \
+  interface \
+  ipc \
+  ipmi \
+  iptables \
+  ipvs \
+  irq \
+  java \
+  load \
+  log_logstash \
+  logfile \
+  lua \
+  lvm \
+  madwifi \
+  match_empty_counter \
+  match_hashed \
+  match_regex \
+  match_timediff \
+  match_value \
+  mbmon \
+  mcelog \
+  md \
+  memcachec \
+  memcached \
+  memory \
+  modbus \
+  mqtt \
+  multimeter \
+  mysql \
+  netlink \
+  network \
+  nfs \
+  nginx \
+  notify_desktop \
+  notify_email \
+  notify_nagios \
+  ntpd \
+  numa \
+  nut \
+  olsrd \
+  onewire \
+  openldap \
+  openvpn \
+  ovs_event \
+  ovs_stats \
+  perl \
+  pinba \
+  ping \
+  postgresql \
+  powerdns \
+  processes \
+  protocols \
+  python \
+  redis \
+  rrdcached \
+  rrdtool \
+  sensors \
+  serial \
+  smart \
+  snmp \
+  snmp_agent \
+  statsd \
+  swap \
+  synproxy \
+  syslog \
+  table \
+  tail \
+  tail_csv \
+  target_notification \
+  target_replace \
+  target_scale \
+  target_set \
+  target_v5upgrade \
+  tcpconns \
+  teamspeak2 \
+  ted \
+  thermal \
+  threshold \
+  tokyotyrant \
+  turbostat \
+  unixsock \
+  uptime \
+  users \
+  uuid \
+  varnish \
+  virt \
+  vmem \
+  vserver \
+  wireless \
+  write_graphite \
+  write_http \
+  write_log \
+  write_prometheus \
+  write_redis \
+  write_sensu \
+  write_tsdb \
+  xencpu \
+  zfs_arc \
+  zookeeper \
 "
 
 RUN /debian.sh
