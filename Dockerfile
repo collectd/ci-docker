@@ -218,4 +218,6 @@ ENV SUPPORTED_PLUGIN_LIST="\
   zookeeper \
 "
 
+RUN echo "deb http://httpredir.debian.org/debian/ experimental main contrib non-free" > /etc/apt/sources.list.d/experimental.list
+
 RUN /debian.sh
