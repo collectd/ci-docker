@@ -24,6 +24,7 @@ COMMON_PACKAGES="\
   strace \
   tar \
   valgrind \
+  which \
 "
 
 grep -q ^Fedora /etc/redhat-release && alias yum=dnf || true
