@@ -4,8 +4,16 @@ ADD debian.sh /debian.sh
 COPY /checks/*.sh /checks/
 
 ENV EXTRA_PACKAGES="\
+  clang-6.0 \
+  clang-7 \
+  clang-8 \
+  clang-9 \
   default-jdk \
   default-libmysqlclient-dev \
+  gcc-6 \
+  gcc-7 \
+  gcc-8 \
+  gcc-9 \
   iptables-dev \
   javahelper \
   libatasmart-dev \
