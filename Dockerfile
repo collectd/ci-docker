@@ -13,7 +13,6 @@ ENV EXTRA_PACKAGES="\
   gcc-6 \
   gcc-7 \
   gcc-8 \
-  gcc-9 \
   iptables-dev \
   javahelper \
   libatasmart-dev \
