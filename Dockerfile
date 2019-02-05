@@ -59,6 +59,8 @@ ENV EXTRA_PACKAGES="\
   libxen-dev \
   libxml2-dev \
   libyajl-dev \
+  musl-dev \
+  musl-tools \
   perl \
   protobuf-c-compiler \
   protobuf-compiler \
