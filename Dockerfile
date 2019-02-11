@@ -147,6 +147,7 @@ ENV SUPPORTED_PLUGIN_LIST="\
   ovs_events \
   ovs_stats \
   perl \
+  pcie_errors \
   pinba \
   ping \
   postgresql \
