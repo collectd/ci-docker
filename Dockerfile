@@ -47,7 +47,7 @@ ENV EXTRA_PACKAGES="\
   libperl-dev \
   libpq-dev \
   libprotobuf-c-dev \
-  libqpid-proton8-dev \
+  libqpid-proton11-dev \
   librabbitmq-dev \
   librdkafka-dev \
   libriemann-client-dev \
