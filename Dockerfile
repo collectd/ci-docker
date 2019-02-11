@@ -10,7 +10,6 @@ ENV EXTRA_PACKAGES="\
   clang-9 \
   default-jdk \
   default-libmysqlclient-dev \
-  gcc-6 \
   gcc-7 \
   gcc-8 \
   iptables-dev \
