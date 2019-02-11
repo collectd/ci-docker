@@ -106,7 +106,7 @@ ENV SUPPORTED_PLUGIN_LIST="\
   hugepages \
   interface \
   ipc \
-  impi \
+  ipmi \
   iptables \
   ipvs \
   irq \
