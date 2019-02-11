@@ -144,6 +144,7 @@ ENV SUPPORTED_PLUGIN_LIST="\
   openvpn \
   ovs_events \
   ovs_stats \
+  pcie_errors \
   perl \
   pinba \
   ping \
