@@ -152,6 +152,7 @@ ENV SUPPORTED_PLUGIN_LIST="\
   openvpn \
   ovs_events \
   ovs_stats \
+  pcie_errors \
   perl \
   pinba \
   ping \
@@ -205,6 +206,7 @@ ENV SUPPORTED_PLUGIN_LIST="\
   write_redis \
   write_riemann \
   write_sensu \
+  write_stackdriver \
   write_tsdb \
   xencpu \
   zfs_arc \
