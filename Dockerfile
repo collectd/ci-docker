@@ -5,9 +5,7 @@ COPY /checks/*.sh /checks/
 
 ENV EXTRA_PACKAGES="\
   OpenIPMI-devel \
-  ganglia-devel \
   hal-devel \
-  hiredis-devel \
   iproute-devel \
   iptables-devel \
   java-1.7.0-openjdk-devel \
@@ -21,12 +19,8 @@ ENV EXTRA_PACKAGES="\
   libmemcached-devel \
   libmicrohttpd-devel \
   libmnl-devel \
-  libmodbus-devel \
   libnotify-devel \
-  liboping-devel \
   libpcap-devel \
-  librabbitmq-devel \
-  libstatgrab-devel \
   libudev-devel \
   libvirt-devel \
   libxml2-devel \
@@ -35,26 +29,20 @@ ENV EXTRA_PACKAGES="\
   lvm2-devel \
   mysql-devel \
   net-snmp-devel \
-  nut-devel \
   openldap-devel \
   openssl-devel \
   perl-ExtUtils-Embed \
   perl-ExtUtils-MakeMaker \
   postgresql-devel \
-  protobuf-c-devel \
   python-devel \
   qpid-proton-c-devel \
   rrdtool-devel \
-  varnish-libs-devel \
-  xen-devel \
   xfsprogs-devel \
   yajl-devel \
 "
 
 ENV SUPPORTED_PLUGIN_LIST="\
-  libcollectdclient \
   aggregation \
-  amqp \
   apache \
   apcups \
   ascent \
@@ -83,7 +71,6 @@ ENV SUPPORTED_PLUGIN_LIST="\
   fhcount \
   filecount \
   fscache \
-  gmond \
   hddtemp \
   hugepages \
   interface \
@@ -110,7 +97,6 @@ ENV SUPPORTED_PLUGIN_LIST="\
   memcachec \
   memcached \
   memory \
-  modbus \
   multimeter \
   mysql \
   netlink \
@@ -122,19 +108,16 @@ ENV SUPPORTED_PLUGIN_LIST="\
   notify_nagios \
   ntpd \
   numa \
-  nut \
   olsrd \
   openldap \
   openvpn \
+  pcie_errors \
   perl \
-  pinba \
-  ping \
   postgresql \
   powerdns \
   processes \
   protocols \
   python \
-  redis \
   rrdtool \
   sensors \
   serial \
@@ -163,7 +146,6 @@ ENV SUPPORTED_PLUGIN_LIST="\
   uptime \
   users \
   uuid \
-  varnish \
   virt \
   vmem \
   vserver \
@@ -171,8 +153,6 @@ ENV SUPPORTED_PLUGIN_LIST="\
   write_graphite \
   write_http \
   write_log \
-  write_prometheus \
-  write_redis \
   write_sensu \
   write_tsdb \
   zfs_arc \
