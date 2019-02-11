@@ -42,6 +42,7 @@ ENV EXTRA_PACKAGES="\
 "
 
 ENV SUPPORTED_PLUGIN_LIST="\
+  libcollectdclient \
   aggregation \
   apache \
   apcups \
