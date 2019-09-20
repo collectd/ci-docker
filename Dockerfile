@@ -13,8 +13,7 @@ ENV EXTRA_PACKAGES="\
   intel-cmt-cat-devel \
   iproute-devel \
   iptables-devel \
-  java-openjdk-devel \
-  java-devel \
+  java-latest-openjdk-devel \
   jpackage-utils \
   libatasmart-devel \
   libcap-devel \
