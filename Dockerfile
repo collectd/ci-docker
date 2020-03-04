@@ -185,7 +185,6 @@ ENV SUPPORTED_PLUGIN_LIST="\
   uptime \
   users \
   uuid \
-  varnish \
   virt \
   vmem \
   vserver \
