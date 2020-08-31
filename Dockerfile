@@ -37,7 +37,7 @@ ENV EXTRA_PACKAGES="\
   libpcap-dev \
   libperl-dev \
   libpq-dev \
-  libprotobuf-c0-dev \
+  libprotobuf-c-dev \
   libqpid-proton11-dev \
   librabbitmq-dev \
   librdkafka-dev \
