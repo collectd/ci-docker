@@ -24,12 +24,12 @@ ENV EXTRA_PACKAGES="\
   liblua5.1-0-dev \
   liblua5.2-dev \
   liblvm2-dev \
+  libmariadb-dev \
   libmemcached-dev \
   libmicrohttpd-dev \
   libmnl-dev \
   libmodbus-dev \
   libmosquitto-dev \
-  libmysqlclient-dev \
   libnotify-dev \
   libopenipmi-dev \
   liboping-dev \
@@ -38,7 +38,7 @@ ENV EXTRA_PACKAGES="\
   libperl-dev \
   libpq-dev \
   libprotobuf-c0-dev \
-  libqpid-proton2-dev \
+  libqpid-proton11-dev \
   librabbitmq-dev \
   librdkafka-dev \
   libriemann-client-dev \
