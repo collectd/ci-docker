@@ -1,4 +1,4 @@
-FROM debian:jessie
+FROM debian:buster
 
 ADD debian.sh /debian.sh
 COPY /checks/*.sh /checks/
