@@ -26,7 +26,6 @@ ENV EXTRA_PACKAGES="\
   libxml2-devel \
   lm_sensors-devel \
   lua-devel \
-  lvm2-devel \
   mysql-devel \
   net-snmp-devel \
   openldap-devel \
@@ -85,7 +84,6 @@ ENV SUPPORTED_PLUGIN_LIST="\
   log_logstash \
   logfile \
   lua \
-  lvm \
   madwifi \
   match_empty_counter \
   match_hashed \
