@@ -65,7 +65,7 @@ ENV EXTRA_PACKAGES="\
   perl \
   protobuf-c-compiler \
   protobuf-compiler \
-  python-dev \
+  python2-dev \
   python3-dev \
   xfslibs-dev \
 "
