@@ -4,15 +4,10 @@ ADD debian.sh /debian.sh
 COPY /checks/*.sh /checks/
 
 ENV EXTRA_PACKAGES="\
-  clang-6.0 \
-  clang-7 \
-  clang-8 \
-  clang-9 \
+  clang \
   default-jdk \
   default-libmysqlclient-dev \
-  gcc-7 \
-  gcc-8 \
-  iptables-dev \
+  gcc \
   javahelper \
   libatasmart-dev \
   libcap-dev \
@@ -26,6 +21,7 @@ ENV EXTRA_PACKAGES="\
   libgps-dev \
   libhiredis-dev \
   libi2c-dev \
+  libiptc-dev \
   libldap2-dev \
   libltdl-dev \
   liblua5.1-0-dev \
