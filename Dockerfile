@@ -5,6 +5,7 @@ COPY /checks/*.sh /checks/
 
 ENV EXTRA_PACKAGES="\
   default-jdk \
+  intel-cmt-cat \
   iptables-dev \
   javahelper \
   libatasmart-dev \
