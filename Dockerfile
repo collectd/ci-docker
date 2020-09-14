@@ -24,7 +24,6 @@ ENV EXTRA_PACKAGES="\
   liblua50-dev \
   liblua5.1-0-dev \
   liblua5.2-dev \
-  libmariadb-dev \
   libmemcached-dev \
   libmicrohttpd-dev \
   libmnl-dev \
@@ -44,7 +43,6 @@ ENV EXTRA_PACKAGES="\
   libriemann-client-dev \
   librrd-dev \
   libsensors4-dev \
-  libsigrok-dev \
   libsnmp-dev \
   libssl-dev \
   libstatgrab-dev \
@@ -65,18 +63,21 @@ ENV EXTRA_PACKAGES="\
 "
 
 ENV SUPPORTED_PLUGIN_LIST="\
-  libcollectdclient \
   aggregation \
   amqp \
+  amqp1 \
   apache \
   apcups \
   ascent \
   barometer \
   battery \
   bind \
+  buddyinfo \
   ceph \
   cgroups \
+  check_uptime \
   chrony \
+  connectivity \
   conntrack \
   contextswitch \
   cpu \
@@ -102,6 +103,8 @@ ENV SUPPORTED_PLUGIN_LIST="\
   gps \
   hddtemp \
   hugepages \
+  infiniband \
+  intel_rdt \
   interface \
   ipc \
   ipmi \
@@ -110,8 +113,9 @@ ENV SUPPORTED_PLUGIN_LIST="\
   irq \
   java \
   load \
-  log_logstash \
   logfile \
+  log_logstash \
+  logparser \
   lua \
   madwifi \
   match_empty_counter \
@@ -122,13 +126,13 @@ ENV SUPPORTED_PLUGIN_LIST="\
   mbmon \
   mcelog \
   md \
+  mdevents \
   memcachec \
   memcached \
   memory \
   modbus \
   mqtt \
   multimeter \
-  mysql \
   netlink \
   network \
   nfs \
@@ -145,13 +149,14 @@ ENV SUPPORTED_PLUGIN_LIST="\
   openvpn \
   ovs_events \
   ovs_stats \
-  perl \
   pcie_errors \
+  perl \
   pinba \
   ping \
   postgresql \
   powerdns \
   processes \
+  procevent \
   protocols \
   python \
   redis \
@@ -159,13 +164,13 @@ ENV SUPPORTED_PLUGIN_LIST="\
   rrdtool \
   sensors \
   serial \
-  sigrok \
   smart \
   snmp \
   snmp_agent \
   statsd \
   swap \
   synproxy \
+  sysevent \
   syslog \
   table \
   tail \
@@ -182,6 +187,7 @@ ENV SUPPORTED_PLUGIN_LIST="\
   threshold \
   tokyotyrant \
   turbostat \
+  ubi \
   unixsock \
   uptime \
   users \
@@ -193,11 +199,15 @@ ENV SUPPORTED_PLUGIN_LIST="\
   wireless \
   write_graphite \
   write_http \
+  write_influxdb_udp \
   write_kafka \
   write_log \
   write_prometheus \
   write_redis \
+  write_riemann \
   write_sensu \
+  write_stackdriver \
+  write_syslog \
   write_tsdb \
   xencpu \
   zfs_arc \
