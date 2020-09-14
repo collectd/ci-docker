@@ -16,7 +16,6 @@ for f in .libs/*.so; do
     continue
   fi
 
-  echo "p=${p}"
   got["${p}"]=1
 done
 
