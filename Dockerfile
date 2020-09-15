@@ -16,6 +16,7 @@ ENV EXTRA_PACKAGES="\
   libdpdk-dev \
   libesmtp-dev \
   libgcrypt20-dev \
+  libganglia1-dev \
   libglib2.0-dev \
   libgps-dev \
   libgrpc++-dev \
