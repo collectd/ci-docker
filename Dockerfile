@@ -66,6 +66,7 @@ ENV EXTRA_PACKAGES="\
 "
 
 ENV SUPPORTED_PLUGIN_LIST="\
+  libcollectdclient \
   aggregation \
   amqp \
   amqp1 \
@@ -76,6 +77,7 @@ ENV SUPPORTED_PLUGIN_LIST="\
   battery \
   bind \
   buddyinfo \
+  capabilities \
   ceph \
   cgroups \
   check_uptime \
@@ -94,6 +96,9 @@ ENV SUPPORTED_PLUGIN_LIST="\
   df \
   disk \
   dns \
+  dpdkevents \
+  dpdkstat \
+  dpdk_telemetry \
   drbd \
   email \
   entropy \
@@ -104,6 +109,7 @@ ENV SUPPORTED_PLUGIN_LIST="\
   fscache \
   gmond \
   gps \
+  grpc \
   hddtemp \
   hugepages \
   infiniband \
@@ -136,6 +142,7 @@ ENV SUPPORTED_PLUGIN_LIST="\
   modbus \
   mqtt \
   multimeter \
+  mysql \
   netlink \
   network \
   nfs \
@@ -205,6 +212,7 @@ ENV SUPPORTED_PLUGIN_LIST="\
   write_influxdb_udp \
   write_kafka \
   write_log \
+  write_mongodb \
   write_prometheus \
   write_redis \
   write_riemann \
