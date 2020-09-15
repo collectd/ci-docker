@@ -18,7 +18,6 @@ ENV EXTRA_PACKAGES="\
   libgcrypt20-dev \
   libglib2.0-dev \
   libgps-dev \
-  libgrpc++-dev \
   libhiredis-dev \
   libi2c-dev \
   libiptc-dev \
@@ -61,7 +60,6 @@ ENV EXTRA_PACKAGES="\
   linux-libc-dev \
   protobuf-c-compiler \
   protobuf-compiler \
-  protobuf-compiler-grpc \
   python-dev \
   riemann-c-client \
 "
