@@ -24,7 +24,6 @@ ENV EXTRA_PACKAGES="\
   libldap2-dev \
   libltdl-dev \
   liblua5.3-dev \
-  liblvm2-dev \
   libmemcached-dev \
   libmicrohttpd-dev \
   libmnl-dev \
@@ -114,7 +113,6 @@ ENV SUPPORTED_PLUGIN_LIST="\
   log_logstash \
   logfile \
   lua \
-  lvm \
   madwifi \
   match_empty_counter \
   match_hashed \
