@@ -7,25 +7,24 @@ ENV EXTRA_PACKAGES="\
   default-jdk \
   default-libmysqlclient-dev \
   intel-cmt-cat \
-  iptables-dev \
   javahelper \
   libatasmart-dev \
   libcap-dev \
   libcurl4-gnutls-dev \
-  libdbi-dev \
+  libdbi0-dev \
   libdpdk-dev \
   libesmtp-dev \
   libganglia1-dev \
   libgcrypt20-dev \
   libglib2.0-dev \
   libgps-dev \
+  libgrpc++-dev \
   libhiredis-dev \
   libi2c-dev \
+  libiptc-dev \
   libldap2-dev \
   libltdl-dev \
-  liblua5.1-0-dev \
-  liblua5.2-dev \
-  liblua50-dev \
+  liblua5.3-dev \
   liblvm2-dev \
   libmemcached-dev \
   libmicrohttpd-dev \
@@ -37,20 +36,19 @@ ENV EXTRA_PACKAGES="\
   libopenipmi-dev \
   liboping-dev \
   libow-dev \
-  libpcap-dev \
+  libpcap0.8-dev \
   libperl-dev \
   libpq-dev \
   libprotobuf-c-dev \
-  libqpid-proton8-dev \
+  libprotobuf-dev \
   librabbitmq-dev \
   librdkafka-dev \
   libriemann-client-dev \
   librrd-dev \
   libsensors4-dev \
   libsigrok-dev \
+  libslurm-dev \
   libsnmp-dev \
-  libssl-dev \
-  libstatgrab-dev \
   libtokyocabinet-dev \
   libtokyotyrant-dev \
   libudev-dev \
@@ -60,14 +58,12 @@ ENV EXTRA_PACKAGES="\
   libxen-dev \
   libxml2-dev \
   libyajl-dev \
-  musl-dev \
-  musl-tools \
-  perl \
+  linux-libc-dev \
   protobuf-c-compiler \
   protobuf-compiler \
+  protobuf-compiler-grpc \
   python-dev \
-  python3-dev \
-  xfslibs-dev \
+  riemann-c-client \
 "
 
 ENV SUPPORTED_PLUGIN_LIST="\
