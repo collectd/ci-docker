@@ -47,6 +47,7 @@ ENV EXTRA_PACKAGES="\
   libsigrok-dev \
   libslurm-dev \
   libsnmp-dev \
+  libssl-dev \
   libtokyocabinet-dev \
   libtokyotyrant-dev \
   libudev-dev \
