@@ -48,6 +48,7 @@ ENV EXTRA_PACKAGES="\
   libsensors4-dev \
   libsigrok-dev \
   libsnmp-dev \
+  libsqlite3-dev \
   libssl-dev \
   libstatgrab-dev \
   libtokyocabinet-dev \
