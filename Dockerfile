@@ -53,6 +53,7 @@ ENV EXTRA_PACKAGES="\
   libsigrok-dev \
   libslurm-dev \
   libsnmp-dev \
+  libsqlite3-dev \
   libssl-dev \
   libstatgrab-dev \
   libtokyocabinet-dev \
