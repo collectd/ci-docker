@@ -21,6 +21,7 @@ ENV EXTRA_PACKAGES="\
   libmnl-devel \
   libnotify-devel \
   libpcap-devel \
+  libsq3-devel \
   libudev-devel \
   libvirt-devel \
   libxml2-devel \
