@@ -49,6 +49,7 @@ ENV EXTRA_PACKAGES="\
   libsensors-dev \
   libslurm-dev \
   libsnmp-dev \
+  libsqlite3-dev \
   libssl-dev \
   libstatgrab-dev \
   libtokyocabinet-dev \
