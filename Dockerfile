@@ -48,6 +48,7 @@ ENV EXTRA_PACKAGES="\
   libsensors-dev \
   libslurm-dev \
   libsnmp-dev \
+  libsqlite3-dev \
   libtokyocabinet-dev \
   libtokyotyrant-dev \
   libudev-dev \
