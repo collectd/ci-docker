@@ -47,6 +47,8 @@ ENV EXTRA_PACKAGES="\
   libsensors-dev \
   libslurm-dev \
   libsnmp-dev \
+  libssl-dev \
+  libstatgrab-dev \
   libtokyocabinet-dev \
   libudev-dev \
   libupsclient-dev \
