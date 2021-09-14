@@ -48,6 +48,8 @@ ENV EXTRA_PACKAGES="\
   libsensors-dev \
   libslurm-dev \
   libsnmp-dev \
+  libssl-dev \
+  libstatgrab-dev \
   libtokyocabinet-dev \
   libtokyotyrant-dev \
   libudev-dev \
