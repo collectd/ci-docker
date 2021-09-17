@@ -1,0 +1,16 @@
+name: PR jobs
+
+on:
+  pull_request:
+    branches-ignore:
+      - main
+
+jobs:
+  # Build and test container for each PR submitted to that branch
+  build_and_test_container:
+
+    runs-on: ubuntu-latest
+    env:
+      SLUG: "collectd/ci:test"
+    steps:
+      - run: echo "Eventually, this will build and test the container for each PR"
