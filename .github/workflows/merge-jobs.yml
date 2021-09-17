@@ -1,0 +1,20 @@
+name: Merge jobs
+
+on:
+  push:
+    branches-ignore:
+      - main
+        # topic branches (e.g. fix/something)
+      - '**/**'
+
+jobs:
+  build_and_publish_container:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Get branch name
+        run: |
+          export BRANCH="$(${{ github.ref }} | rev | cut -d '/' -f1 | rev )
+      - run:
+          export SLUG="collectd/ci:${BRANCH}"
+      - run: |
+          echo "Eventually, this will build ${SLUG}, on merge to ${BRANCH}"
