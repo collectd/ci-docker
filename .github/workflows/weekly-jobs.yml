@@ -1,0 +1,41 @@
+name: Weekly container builds for stable distro releases
+
+on:
+  # These push/pr options will be removed one they are proven to work (one PR/push ought to do it)
+  pull_request:
+    branches: main
+  push:
+    branches: main
+  schedule:
+    - cron: '0 0 * * 0'
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    strategy:
+      # Don't stop other in-progress jobs when one fails
+      fail-fast: false
+      matrix:
+        branch:
+          # Debian
+            # Debian 10
+          - buster_amd64
+            # Debian 9
+          - stretch_amd64
+            # Debian 8
+          - jessie_amd64
+          # Ubuntu
+            # Ubuntu 16.04
+          - xenial_amd64
+            # Ubuntu 14.04
+          - trusty_amd64
+          # CentOS
+          - el7_x86_64
+
+    env:
+      SLUG: "collectd/ci:${{ matrix.branch }}"
+
+    steps:
+      - run: echo "Eventually, this will build and push ${SLUG}"
