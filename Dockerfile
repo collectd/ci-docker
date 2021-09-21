@@ -52,7 +52,6 @@ ENV EXTRA_PACKAGES="\
   varnish-libs-devel \
   xen-devel \
   xfsprogs-devel \
-  xmms-devel \
   yajl-devel \
 "
 
@@ -193,7 +192,6 @@ ENV SUPPORTED_PLUGIN_LIST="\
   write_sensu \
   write_tsdb \
   xencpu \
-  xmms \
   zfs_arc \
   zookeeper \
 "
