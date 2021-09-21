@@ -13,4 +13,16 @@ jobs:
     env:
       SLUG: "collectd/ci:test"
     steps:
-      - run: echo "Eventually, this will build and test the container for each PR"
+      - uses: actions/checkout@v2
+      - name: Build container
+        run: docker build -t "${SLUG}" .
+      - run: docker inspect "${SLUG}"
+      - name: Check out the latest verison of collectd
+        uses: actions/checkout@v2
+        with:
+          repository: collectd/collectd
+          ref: main
+          path: ${{ github.workspace }}/collectd
+      - name: Make sure collectd builds on the container
+        run: |
+          docker run -v "${GITHUB_WORKSPACE}/collectd:/collectd" -w /collectd "${SLUG}" bash -c './build.sh && ./configure && make && make test'
