@@ -23,7 +23,6 @@ ENV EXTRA_PACKAGES="\
   liblua5.1-0-dev \
   liblua5.2-dev \
   liblua50-dev \
-  liblvm2-dev \
   libmemcached-dev \
   libmicrohttpd-dev \
   libmnl-dev \
@@ -111,7 +110,6 @@ ENV SUPPORTED_PLUGIN_LIST="\
   log_logstash \
   logfile \
   lua \
-  lvm \
   madwifi \
   match_empty_counter \
   match_hashed \
