@@ -123,7 +123,6 @@ ENV SUPPORTED_PLUGIN_LIST="\
   logfile \
   logparser \
   lua \
-  lvm \
   madwifi \
   match_empty_counter \
   match_hashed \
