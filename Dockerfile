@@ -76,9 +76,12 @@ ENV SUPPORTED_PLUGIN_LIST="\
   barometer \
   battery \
   bind \
+  buddyinfo \
   ceph \
   cgroups \
+  check_uptime \
   chrony \
+  connectivity \
   conntrack \
   contextswitch \
   cpu \
@@ -104,6 +107,7 @@ ENV SUPPORTED_PLUGIN_LIST="\
   gps \
   hddtemp \
   hugepages \
+  infiniband \
   interface \
   ipc \
   ipmi \
@@ -114,6 +118,7 @@ ENV SUPPORTED_PLUGIN_LIST="\
   load \
   log_logstash \
   logfile \
+  logparser \
   lua \
   lvm \
   madwifi \
@@ -125,6 +130,7 @@ ENV SUPPORTED_PLUGIN_LIST="\
   mbmon \
   mcelog \
   md \
+  mdevents \
   memcachec \
   memcached \
   memory \
@@ -155,6 +161,7 @@ ENV SUPPORTED_PLUGIN_LIST="\
   postgresql \
   powerdns \
   processes \
+  procevent \
   protocols \
   python \
   redis \
@@ -169,6 +176,7 @@ ENV SUPPORTED_PLUGIN_LIST="\
   statsd \
   swap \
   synproxy \
+  sysevent \
   syslog \
   table \
   tail \
@@ -185,6 +193,7 @@ ENV SUPPORTED_PLUGIN_LIST="\
   threshold \
   tokyotyrant \
   turbostat \
+  ubi \
   unixsock \
   uptime \
   users \
@@ -196,12 +205,14 @@ ENV SUPPORTED_PLUGIN_LIST="\
   wireless \
   write_graphite \
   write_http \
+  write_influxdb_udp \
   write_kafka \
   write_log \
   write_prometheus \
   write_redis \
   write_riemann \
   write_sensu \
+  write_syslog \
   write_tsdb \
   xencpu \
   zfs_arc \
