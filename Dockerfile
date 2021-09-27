@@ -1,10 +1,12 @@
-FROM ubuntu:xenial
+FROM ubuntu:bionic
 
 ADD debian.sh /debian.sh
 COPY /checks/*.sh /checks/
 
 ENV EXTRA_PACKAGES="\
+  dpdk-dev \
   default-jdk \
+  intel-cmt-cat \
   iptables-dev \
   javahelper \
   libatasmart-dev \
@@ -16,6 +18,7 @@ ENV EXTRA_PACKAGES="\
   libgcrypt20-dev \
   libglib2.0-dev \
   libgps-dev \
+  libgrpc++-dev \
   libhiredis-dev \
   libi2c-dev \
   libjansson-dev \
@@ -40,14 +43,15 @@ ENV EXTRA_PACKAGES="\
   libpcap-dev \
   libperl-dev \
   libpq-dev \
-  libprotobuf-c0-dev \
-  libqpid-proton2-dev \
+  libprotobuf-c-dev \
+  libqpid-proton8-dev \
   librabbitmq-dev \
   librdkafka-dev \
   libriemann-client-dev \
   librrd-dev \
   libsensors4-dev \
   libsigrok-dev \
+  libslurm-dev \
   libsnmp-dev \
   libssl-dev \
   libstatgrab-dev \
@@ -97,6 +101,8 @@ ENV SUPPORTED_PLUGIN_LIST="\
   df \
   disk \
   dns \
+  dpdkevents \
+  dpdkstat \
   dpdk_telemetry \
   drbd \
   email \
@@ -111,6 +117,7 @@ ENV SUPPORTED_PLUGIN_LIST="\
   hddtemp \
   hugepages \
   infiniband \
+  intel_rdt \
   interface \
   ipc \
   ipmi \
@@ -171,7 +178,6 @@ ENV SUPPORTED_PLUGIN_LIST="\
   rrdtool \
   sensors \
   serial \
-  sigrok \
   smart \
   snmp \
   snmp_agent \
@@ -210,10 +216,12 @@ ENV SUPPORTED_PLUGIN_LIST="\
   write_influxdb_udp \
   write_kafka \
   write_log \
+  write_mongodb \
   write_prometheus \
   write_redis \
   write_riemann \
   write_sensu \
+  write_stackdriver \
   write_syslog \
   write_tsdb \
   xencpu \
