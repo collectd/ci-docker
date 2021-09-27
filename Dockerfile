@@ -1,4 +1,4 @@
-FROM ubuntu:bionic
+FROM ubuntu:focal
 
 ADD debian.sh /debian.sh
 COPY /checks/*.sh /checks/
@@ -7,7 +7,6 @@ ENV EXTRA_PACKAGES="\
   dpdk-dev \
   default-jdk \
   intel-cmt-cat \
-  iptables-dev \
   javahelper \
   libatasmart-dev \
   libcap-dev \
@@ -21,6 +20,7 @@ ENV EXTRA_PACKAGES="\
   libgrpc++-dev \
   libhiredis-dev \
   libi2c-dev \
+  libiptc-dev \
   libjansson-dev \
   libldap2-dev \
   libltdl-dev \
@@ -44,7 +44,7 @@ ENV EXTRA_PACKAGES="\
   libperl-dev \
   libpq-dev \
   libprotobuf-c-dev \
-  libqpid-proton8-dev \
+  libqpid-proton11-dev \
   librabbitmq-dev \
   librdkafka-dev \
   libriemann-client-dev \
@@ -75,6 +75,7 @@ ENV SUPPORTED_PLUGIN_LIST="\
   libcollectdclient \
   aggregation \
   amqp \
+  amqp1 \
   apache \
   apcups \
   ascent \
