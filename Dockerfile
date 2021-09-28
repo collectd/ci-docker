@@ -9,8 +9,10 @@ ENV EXTRA_PACKAGES="\
   gpsd-devel \
   gtk2-devel \
   hiredis-devel \
+  intel-cmt-cat-devel \
   iproute-devel \
   iptables-devel \
+  jansson-devel \
   java-1.7.0-openjdk-devel \
   java-devel \
   jpackage-utils \
@@ -27,12 +29,12 @@ ENV EXTRA_PACKAGES="\
   liboping-devel \
   libpcap-devel \
   librabbitmq-devel \
+  librdkafka-devel \
   libudev-devel \
   libvirt-devel \
   libxml2-devel \
   lm_sensors-devel \
   lua-devel \
-  lvm2-devel \
   mongo-c-driver-devel \
   mosquitto-devel \
   mysql-devel \
@@ -58,14 +60,19 @@ ENV SUPPORTED_PLUGIN_LIST="\
   libcollectdclient \
   aggregation \
   amqp \
+  amqp1 \
   apache \
   apcups \
   ascent \
   battery \
   bind \
+  buddyinfo \
+  capabilities \
   ceph \
   cgroups \
+  check_uptime \
   chrony \
+  connectivity \
   conntrack \
   contextswitch \
   cpu \
@@ -79,6 +86,7 @@ ENV SUPPORTED_PLUGIN_LIST="\
   df \
   disk \
   dns \
+  dpdk_telemetry \
   drbd \
   email \
   entropy \
@@ -91,6 +99,8 @@ ENV SUPPORTED_PLUGIN_LIST="\
   gps \
   hddtemp \
   hugepages \
+  infiniband \
+  intel_rdt \
   interface \
   ipc \
   ipmi \
@@ -101,8 +111,8 @@ ENV SUPPORTED_PLUGIN_LIST="\
   load \
   log_logstash \
   logfile \
+  logparser \
   lua \
-  lvm \
   madwifi \
   match_empty_counter \
   match_hashed \
@@ -112,6 +122,7 @@ ENV SUPPORTED_PLUGIN_LIST="\
   mbmon \
   mcelog \
   md \
+  mdevents \
   memcachec \
   memcached \
   memory \
@@ -134,12 +145,14 @@ ENV SUPPORTED_PLUGIN_LIST="\
   openvpn \
   ovs_events \
   ovs_stats \
+  pcie_errors \
   perl \
   pinba \
   ping \
   postgresql \
   powerdns \
   processes \
+  procevent \
   protocols \
   python \
   redis \
@@ -153,6 +166,7 @@ ENV SUPPORTED_PLUGIN_LIST="\
   statsd \
   swap \
   synproxy \
+  sysevent \
   syslog \
   table \
   tail \
@@ -168,6 +182,7 @@ ENV SUPPORTED_PLUGIN_LIST="\
   thermal \
   threshold \
   turbostat \
+  ubi \
   unixsock \
   uptime \
   users \
@@ -179,16 +194,22 @@ ENV SUPPORTED_PLUGIN_LIST="\
   wireless \
   write_graphite \
   write_http \
+  write_influxdb_udp \
   write_log \
+  write_mongodb \
+  write_kafka \
   write_prometheus \
   write_redis \
   write_riemann \
   write_sensu \
+  write_syslog \
   write_tsdb \
   xencpu \
   xmms \
   zfs_arc \
   zookeeper \
 "
+
+RUN yum -y install epel-release
 
 RUN /redhat.sh
