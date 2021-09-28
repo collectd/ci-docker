@@ -24,8 +24,6 @@ jobs:
           - bullseye_amd64
             # Debian 10
           - buster_amd64
-            # Debian 9
-          - stretch_amd64
           # Ubuntu
             # Ubuntu 16.04
           - xenial_amd64
