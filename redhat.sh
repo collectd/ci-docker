@@ -29,7 +29,11 @@ COMMON_PACKAGES="\
 
 grep -q ^Fedora /etc/redhat-release && alias yum=dnf || true
 
+# enable centos opstools repository
+dnf -y install centos-release-opstools
+
 yum -y --skip-broken update
+
 
 yum -y install $COMMON_PACKAGES $EXTRA_PACKAGES
 
