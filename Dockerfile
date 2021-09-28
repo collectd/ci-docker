@@ -1,4 +1,4 @@
-FROM debian:buster
+FROM debian:bullseye
 
 ADD debian.sh /debian.sh
 COPY /checks/*.sh /checks/
