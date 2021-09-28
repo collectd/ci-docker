@@ -21,6 +21,8 @@ ENV EXTRA_PACKAGES="\
   libgrpc++-dev \
   libhiredis-dev \
   libi2c-dev \
+  libiptc-dev \
+  libjansson-dev \
   libldap2-dev \
   libltdl-dev \
   liblua5.3-dev \
@@ -117,6 +119,7 @@ ENV SUPPORTED_PLUGIN_LIST="\
   interface \
   ipc \
   ipmi \
+  iptables \
   ipvs \
   irq \
   java \
