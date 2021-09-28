@@ -48,7 +48,6 @@ ENV EXTRA_PACKAGES="\
   libslurm-dev \
   libsnmp-dev \
   libtokyocabinet-dev \
-  libtokyotyrant-dev \
   libudev-dev \
   libupsclient-dev \
   libvarnishapi-dev \
@@ -193,7 +192,6 @@ ENV SUPPORTED_PLUGIN_LIST="\
   ted \
   thermal \
   threshold \
-  tokyotyrant \
   turbostat \
   ubi \
   unixsock \
