@@ -18,6 +18,7 @@ ENV EXTRA_PACKAGES="\
   libgps-dev \
   libhiredis-dev \
   libi2c-dev \
+  libjansson-dev \
   libldap2-dev \
   libltdl-dev \
   liblua50-dev \
@@ -37,6 +38,7 @@ ENV EXTRA_PACKAGES="\
   libpcap-dev \
   libperl-dev \
   libpq-dev \
+  libprotobuf-c-dev \
   libprotobuf-c0-dev \
   libqpid-proton2-dev \
   librabbitmq-dev \
@@ -74,9 +76,13 @@ ENV SUPPORTED_PLUGIN_LIST="\
   barometer \
   battery \
   bind \
+  buddyinfo \
+  capabilities \
   ceph \
   cgroups \
+  check_uptime \
   chrony \
+  connectivity \
   conntrack \
   contextswitch \
   cpu \
@@ -90,6 +96,7 @@ ENV SUPPORTED_PLUGIN_LIST="\
   df \
   disk \
   dns \
+  dpdk_telemetry \
   drbd \
   email \
   entropy \
@@ -102,6 +109,7 @@ ENV SUPPORTED_PLUGIN_LIST="\
   gps \
   hddtemp \
   hugepages \
+  infiniband \
   interface \
   ipc \
   ipmi \
@@ -112,8 +120,8 @@ ENV SUPPORTED_PLUGIN_LIST="\
   load \
   log_logstash \
   logfile \
+  logparser \
   lua \
-  lvm \
   madwifi \
   match_empty_counter \
   match_hashed \
@@ -123,6 +131,7 @@ ENV SUPPORTED_PLUGIN_LIST="\
   mbmon \
   mcelog \
   md \
+  mdevents \
   memcachec \
   memcached \
   memory \
@@ -153,6 +162,7 @@ ENV SUPPORTED_PLUGIN_LIST="\
   postgresql \
   powerdns \
   processes \
+  procevent \
   protocols \
   python \
   redis \
@@ -167,6 +177,7 @@ ENV SUPPORTED_PLUGIN_LIST="\
   statsd \
   swap \
   synproxy \
+  sysevent \
   syslog \
   table \
   tail \
@@ -183,6 +194,7 @@ ENV SUPPORTED_PLUGIN_LIST="\
   threshold \
   tokyotyrant \
   turbostat \
+  ubi \
   unixsock \
   uptime \
   users \
@@ -194,11 +206,13 @@ ENV SUPPORTED_PLUGIN_LIST="\
   wireless \
   write_graphite \
   write_http \
+  write_influxdb_udp \
   write_kafka \
   write_log \
   write_prometheus \
   write_redis \
   write_sensu \
+  write_syslog \
   write_tsdb \
   xencpu \
   zfs_arc \
