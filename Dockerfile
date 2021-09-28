@@ -7,7 +7,6 @@ ENV EXTRA_PACKAGES="\
   default-jdk \
   default-libmysqlclient-dev \
   intel-cmt-cat \
-  iptables-dev \
   javahelper \
   libatasmart-dev \
   libcap-dev \
@@ -117,7 +116,6 @@ ENV SUPPORTED_PLUGIN_LIST="\
   interface \
   ipc \
   ipmi \
-  iptables \
   ipvs \
   irq \
   java \
