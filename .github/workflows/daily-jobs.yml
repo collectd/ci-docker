@@ -21,7 +21,7 @@ jobs:
       matrix:
         branch:
           - sid_amd64
-          - fedora_rawhide_x86_64
+          - fedora34_x86_64 
 
     env:
       SLUG: "collectd/ci:${{ matrix.branch }}"
