@@ -51,7 +51,6 @@ ENV EXTRA_PACKAGES="\
   rrdtool-devel \
   varnish-libs-devel \
   xfsprogs-devel \
-  xmms-devel \
   yajl-devel \
 "
 
