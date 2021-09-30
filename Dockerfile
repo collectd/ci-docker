@@ -21,6 +21,7 @@ ENV EXTRA_PACKAGES="\
   libhiredis-dev \
   libi2c-dev \
   libiptc-dev \
+  libjansson-dev \
   libldap2-dev \
   libltdl-dev \
   liblua5.3-dev \
@@ -48,6 +49,7 @@ ENV EXTRA_PACKAGES="\
   libslurm-dev \
   libsnmp-dev \
   libssl-dev \
+  libstatgrab-dev \
   libtokyocabinet-dev \
   libtokyotyrant-dev \
   libudev-dev \
@@ -75,6 +77,7 @@ ENV SUPPORTED_PLUGIN_LIST="\
   battery \
   bind \
   buddyinfo \
+  capabilities \
   ceph \
   cgroups \
   check_uptime \
@@ -95,6 +98,7 @@ ENV SUPPORTED_PLUGIN_LIST="\
   dns \
   dpdkevents \
   dpdkstat \
+  dpdk_telemetry \
   drbd \
   email \
   entropy \
