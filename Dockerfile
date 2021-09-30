@@ -5,14 +5,17 @@ COPY /checks/*.sh /checks/
 
 ENV EXTRA_PACKAGES="\
   OpenIPMI-devel \
-  ganglia-devel \
+  dpdk-devel \
   gpsd-devel \
   gtk2-devel \
   hiredis-devel \
+  intel-cmt-cat-devel \
   iproute-devel \
   iptables-devel \
-  java-1.7.0-openjdk-devel \
+  jansson-devel \
+  java-1.8.0-openjdk-devel \
   java-devel \
+  jevents-devel \
   jpackage-utils \
   libatasmart-devel \
   libcap-devel \
@@ -22,17 +25,16 @@ ENV EXTRA_PACKAGES="\
   libmemcached-devel \
   libmicrohttpd-devel \
   libmnl-devel \
-  libmodbus-devel \
   libnotify-devel \
   liboping-devel \
   libpcap-devel \
   librabbitmq-devel \
+  librdkafka-devel \
   libudev-devel \
   libvirt-devel \
   libxml2-devel \
   lm_sensors-devel \
   lua-devel \
-  lvm2-devel \
   mongo-c-driver-devel \
   mosquitto-devel \
   mysql-devel \
@@ -43,12 +45,11 @@ ENV EXTRA_PACKAGES="\
   perl-ExtUtils-Embed \
   postgresql-devel \
   protobuf-c-devel \
-  python-devel \
+  python3-devel \
   qpid-proton-c-devel \
   riemann-c-client-devel \
   rrdtool-devel \
   varnish-libs-devel \
-  xen-devel \
   xfsprogs-devel \
   xmms-devel \
   yajl-devel \
@@ -58,14 +59,19 @@ ENV SUPPORTED_PLUGIN_LIST="\
   libcollectdclient \
   aggregation \
   amqp \
+  amqp1 \
   apache \
   apcups \
   ascent \
   battery \
   bind \
+  buddyinfo \
+  capabilities \
   ceph \
   cgroups \
+  check_uptime \
   chrony \
+  connectivity \
   conntrack \
   contextswitch \
   cpu \
@@ -79,6 +85,9 @@ ENV SUPPORTED_PLUGIN_LIST="\
   df \
   disk \
   dns \
+  dpdkevents \
+  dpdkstat \
+  dpdk_telemetry \
   drbd \
   email \
   entropy \
@@ -87,10 +96,12 @@ ENV SUPPORTED_PLUGIN_LIST="\
   fhcount \
   filecount \
   fscache \
-  gmond \
   gps \
   hddtemp \
   hugepages \
+  infiniband \
+  intel_pmu \
+  intel_rdt \
   interface \
   ipc \
   ipmi \
@@ -101,8 +112,8 @@ ENV SUPPORTED_PLUGIN_LIST="\
   load \
   log_logstash \
   logfile \
+  logparser \
   lua \
-  lvm \
   madwifi \
   match_empty_counter \
   match_hashed \
@@ -112,10 +123,10 @@ ENV SUPPORTED_PLUGIN_LIST="\
   mbmon \
   mcelog \
   md \
+  mdevents \
   memcachec \
   memcached \
   memory \
-  modbus \
   mqtt \
   multimeter \
   mysql \
@@ -134,6 +145,7 @@ ENV SUPPORTED_PLUGIN_LIST="\
   openvpn \
   ovs_events \
   ovs_stats \
+  pcie_errors \
   perl \
   pinba \
   ping \
@@ -141,6 +153,7 @@ ENV SUPPORTED_PLUGIN_LIST="\
   powerdns \
   processes \
   protocols \
+  procevent \
   python \
   redis \
   rrdcached \
@@ -153,6 +166,7 @@ ENV SUPPORTED_PLUGIN_LIST="\
   statsd \
   swap \
   synproxy \
+  sysevent \
   syslog \
   table \
   tail \
@@ -168,6 +182,7 @@ ENV SUPPORTED_PLUGIN_LIST="\
   thermal \
   threshold \
   turbostat \
+  ubi \
   unixsock \
   uptime \
   users \
@@ -179,16 +194,23 @@ ENV SUPPORTED_PLUGIN_LIST="\
   wireless \
   write_graphite \
   write_http \
+  write_influxdb_udp \
+  write_kafka \
   write_log \
+  write_mongodb \
   write_prometheus \
   write_redis \
   write_riemann \
   write_sensu \
+  write_stackdriver \
+  write_syslog \
   write_tsdb \
-  xencpu \
-  xmms \
   zfs_arc \
   zookeeper \
 "
+
+# The OpsTools sig provides collectd support in centos
+# The PowerTools repo is disabled by default, so needs to be enabled to get some of the required packages.
+RUN dnf -y install epel-release yum-utils centos-release-opstools 'dnf-command(config-manager)' && dnf config-manager --set-enabled powertools
 
 RUN /redhat.sh
