@@ -23,6 +23,13 @@ jobs:
           repository: collectd/collectd
           ref: main
           path: ${{ github.workspace }}/collectd
+      - name: Create the test container
+        run: |
+          docker run -itd --name collectd-pr-test -v "${GITHUB_WORKSPACE}/collectd:/collectd" -w /collectd "${SLUG}"
       - name: Make sure collectd builds on the container
         run: |
-          docker run -v "${GITHUB_WORKSPACE}/collectd:/collectd" -w /collectd "${SLUG}" bash -c './build.sh && ./configure && make && make check'
+         docker exec -w /collectd collectd-pr-test bash -c './build.sh && ./configure && make && make check'
+      - name: Run collectd unit tests
+        continue-on-error: true
+        run: |
+          docker exec -w /collectd collectd-pr-test make check
