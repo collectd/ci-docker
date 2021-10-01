@@ -18,6 +18,7 @@ ENV EXTRA_PACKAGES="\
   libgps-dev \
   libhiredis-dev \
   libi2c-dev \
+  libjansson-dev \
   libldap2-dev \
   libltdl-dev \
   liblua5.1-0-dev \
@@ -73,6 +74,7 @@ ENV SUPPORTED_PLUGIN_LIST="\
   battery \
   bind \
   buddyinfo \
+  capabilities \
   ceph \
   cgroups \
   check_uptime \
@@ -91,6 +93,7 @@ ENV SUPPORTED_PLUGIN_LIST="\
   df \
   disk \
   dns \
+  dpdk_telemetry \
   drbd \
   email \
   entropy \
@@ -192,6 +195,7 @@ ENV SUPPORTED_PLUGIN_LIST="\
   uptime \
   users \
   uuid \
+  varnish \
   virt \
   vmem \
   vserver \
