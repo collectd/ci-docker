@@ -28,7 +28,6 @@ ENV EXTRA_PACKAGES="\
   libltdl-dev \
   liblua5.1-0-dev \
   liblua5.2-dev \
-  liblua50-dev \
   liblvm2-dev \
   libmemcached-dev \
   libmicrohttpd-dev \
@@ -54,8 +53,6 @@ ENV EXTRA_PACKAGES="\
   libsnmp-dev \
   libssl-dev \
   libstatgrab-dev \
-  libtokyocabinet-dev \
-  libtokyotyrant-dev \
   libudev-dev \
   libupsclient-dev \
   libvarnishapi-dev \
@@ -200,7 +197,6 @@ ENV SUPPORTED_PLUGIN_LIST="\
   ted \
   thermal \
   threshold \
-  tokyotyrant \
   turbostat \
   ubi \
   unixsock \
