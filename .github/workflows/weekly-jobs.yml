@@ -20,6 +20,8 @@ jobs:
             # Debian 10
           - buster_amd64
           # Ubuntu
+            # Ubuntu 20.04
+          - focal_amd64
             # Ubuntu 18.04
           - bionic_amd64
             # Ubuntu 16.04
