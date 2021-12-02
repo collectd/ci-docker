@@ -22,6 +22,8 @@ ENV EXTRA_PACKAGES="\
   libgrpc++-dev \
   libhiredis-dev \
   libi2c-dev \
+  libiptc-dev \
+  libjansson-dev \
   libldap2-dev \
   libltdl-dev \
   liblua5.3-dev \
@@ -49,6 +51,8 @@ ENV EXTRA_PACKAGES="\
   libslurm-dev \
   libsnmp-dev \
   libsqlite3-dev \
+  libssl-dev \
+  libstatgrab-dev \
   libtokyocabinet-dev \
   libtokyotyrant-dev \
   libudev-dev \
