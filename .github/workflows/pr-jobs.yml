@@ -12,6 +12,7 @@ jobs:
     runs-on: ubuntu-latest
     env:
       SLUG: "collectd/ci:test"
+      VALGRIND_OPTS: "--errors-for-leak-kinds=definite"
     steps:
       - uses: actions/checkout@v2
       - name: Build container
