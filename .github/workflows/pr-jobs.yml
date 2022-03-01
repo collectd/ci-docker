@@ -12,6 +12,7 @@ jobs:
     runs-on: ubuntu-latest
     env:
       SLUG: "collectd/ci:test"
+      VALGRIND_OPTS: "--errors-for-leak-kinds=definite"
     steps:
       - uses: actions/checkout@v2
       - name: Build container
@@ -25,4 +26,4 @@ jobs:
           path: ${{ github.workspace }}/collectd
       - name: Make sure collectd builds on the container
         run: |
-          docker run -v "${GITHUB_WORKSPACE}/collectd:/collectd" -w /collectd "${SLUG}" bash -c './build.sh && ./configure && make && make check'
+          docker run -v "${GITHUB_WORKSPACE}/collectd:/collectd" -e VALGRIND_OPTS=${VALGRIND_OPTS} -w /collectd "${SLUG}" bash -c './build.sh && ./configure && make && make check'

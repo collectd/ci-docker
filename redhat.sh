@@ -4,6 +4,7 @@ COMMON_PACKAGES="\
   autoconf \
   automake \
   bison \
+  bzip2 \
   clang \
   cpp \
   curl \
