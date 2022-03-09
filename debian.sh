@@ -5,6 +5,7 @@ COMMON_PACKAGES="\
   automake \
   autotools-dev \
   bison \
+  bzip2 \
   clang \
   cpp \
   dpkg-dev \
