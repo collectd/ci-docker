@@ -37,7 +37,7 @@ ENV EXTRA_PACKAGES="\
   lua-devel \
   lvm2-devel \
   mosquitto-devel \
-  mysql-devel \
+  mariadb-devel \
   net-snmp-devel \
   nut-devel \
   openldap-devel \
@@ -45,7 +45,6 @@ ENV EXTRA_PACKAGES="\
   perl-ExtUtils-Embed \
   postgresql-devel \
   protobuf-c-devel \
-  python-devel \
   python3-devel \
   riemann-c-client-devel \
   rrdtool-devel \
