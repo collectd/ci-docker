@@ -1,4 +1,4 @@
-FROM fedora:rawhide
+FROM fedora:36
 
 ADD redhat.sh /redhat.sh
 COPY /checks/*.sh /checks/
