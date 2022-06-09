@@ -1,4 +1,4 @@
-FROM quay.io/centos/centos:stream8
+FROM quay.io/centos/centos:stream9
 
 ADD redhat.sh /redhat.sh
 COPY /checks/*.sh /checks/
@@ -46,7 +46,6 @@ ENV EXTRA_PACKAGES="\
   postgresql-devel \
   protobuf-c-devel \
   python3-devel \
-  qpid-proton-c-devel \
   riemann-c-client-devel \
   rrdtool-devel \
   varnish-libs-devel \
@@ -209,7 +208,8 @@ ENV SUPPORTED_PLUGIN_LIST="\
 "
 
 # The OpsTools sig provides collectd support in centos
-# The PowerTools repo is disabled by default, so needs to be enabled to get some of the required packages.
-RUN dnf -y install epel-release yum-utils centos-release-opstools 'dnf-command(config-manager)' && dnf config-manager --set-enabled powertools
+# The PowerTools repo is now known as crb (CodeReady Linux Builder)
+RUN dnf -y install epel-release yum-utils centos-release-opstools 'dnf-command(config-manager)' && dnf config-manager --set-enabled crb
+RUN dnf repolist
 
 RUN /redhat.sh
