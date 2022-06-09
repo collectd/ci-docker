@@ -16,7 +16,6 @@ jobs:
       matrix:
         branch:
           - sid_amd64
-          - fedora34_x86_64
           - fedora35_x86_64
           - fedora36_x86_64
           - fedora_rawhide_x86_64
