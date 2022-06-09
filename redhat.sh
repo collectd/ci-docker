@@ -36,6 +36,6 @@ dnf -y install centos-release-opstools
 yum -y --skip-broken update
 
 
-yum -y install $COMMON_PACKAGES $EXTRA_PACKAGES
+yum -y install --allowerasing $COMMON_PACKAGES $EXTRA_PACKAGES
 
 yum -y clean all
