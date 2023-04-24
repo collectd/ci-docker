@@ -1,4 +1,4 @@
-FROM fedora:rawhide
+FROM fedora:38
 
 ADD redhat.sh /redhat.sh
 COPY /checks/*.sh /checks/
@@ -54,7 +54,6 @@ ENV EXTRA_PACKAGES="\
 ENV SUPPORTED_PLUGIN_LIST="\
   libcollectdclient \
   aggregation \
-  amqp \
   apache \
   apcups \
   ascent \
