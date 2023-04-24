@@ -13,8 +13,6 @@ ENV EXTRA_PACKAGES="\
   intel-cmt-cat-devel \
   iproute-devel \
   iptables-devel \
-  java-latest-openjdk-devel \
-  jpackage-utils \
   libatasmart-devel \
   libcap-devel \
   libcurl-devel \
@@ -49,7 +47,6 @@ ENV EXTRA_PACKAGES="\
   riemann-c-client-devel \
   rrdtool-devel \
   varnish-libs-devel \
-  xen-devel \
   xfsprogs-devel \
   yajl-devel \
 "
@@ -100,7 +97,6 @@ ENV SUPPORTED_PLUGIN_LIST="\
   iptables \
   ipvs \
   irq \
-  java \
   load \
   log_logstash \
   logfile \
@@ -190,7 +186,6 @@ ENV SUPPORTED_PLUGIN_LIST="\
   write_riemann \
   write_sensu \
   write_tsdb \
-  xencpu \
   zfs_arc \
   zookeeper \
 "
