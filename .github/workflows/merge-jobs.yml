@@ -4,8 +4,6 @@ on:
   push:
     branches-ignore:
       - main
-        # topic branches (e.g. fix/something)
-      - '*/**'
 
 jobs:
   build_and_publish_container:
