@@ -17,7 +17,8 @@ jobs:
       - uses: actions/checkout@v4
       - name: Build container
         run: docker build -t "${SLUG}" .
-      - run: docker inspect "${SLUG}"
+      - name: Inspect container
+        run: docker inspect "${SLUG}"
       - name: Check out the latest verison of collectd
         uses: actions/checkout@v4
         with:
