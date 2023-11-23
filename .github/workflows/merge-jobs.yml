@@ -12,7 +12,7 @@ jobs:
       - uses: actions/checkout@v4
       - name: Get branch name
         run: |
-          export BRANCH="$(sed -e 's#refs/heads/##' <<<"${GITHUB_REF}")
+          export BRANCH="$(sed -e 's#refs/heads/##' <<<"${GITHUB_REF}")"
       - run: |
           export SLUG="collectd/ci:${BRANCH}"
       - name: Build container
