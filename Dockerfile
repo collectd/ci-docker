@@ -64,7 +64,7 @@ ENV EXTRA_PACKAGES="\
   protobuf-c-compiler \
   protobuf-compiler \
   protobuf-compiler-grpc \
-  python-dev \
+  python3-dev \
   riemann-c-client \
 "
 
