@@ -1,17 +1,15 @@
-name: Merge jobs
+name: Build on Push
 
 on:
-  pull_request:
-    types: [closed]
+  push:
     branches-ignore:
       - main
         # topic branches (e.g. fix/something)
-      - '**/**'
+      - '*/**'
 
 jobs:
   build_and_publish_container:
     runs-on: ubuntu-latest
-    if: github.event.pull_request.merged == true
     steps:
       - uses: actions/checkout@v2
       - name: Get branch name
