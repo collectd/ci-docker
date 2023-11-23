@@ -23,6 +23,8 @@ COMMON_PACKAGES="\
   valgrind \
 "
 
+find /etc/apt -ls
+
 sed -i 's/main$/main contrib non-free/' /etc/apt/sources.list
 
 cat << EOF > /etc/apt/apt.conf.d/50misc-opts
