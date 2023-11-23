@@ -14,12 +14,12 @@ jobs:
       SLUG: "collectd/ci:test"
       VALGRIND_OPTS: "--errors-for-leak-kinds=definite"
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v4
       - name: Build container
         run: docker build -t "${SLUG}" .
       - run: docker inspect "${SLUG}"
       - name: Check out the latest verison of collectd
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4
         with:
           repository: collectd/collectd
           ref: main
@@ -29,7 +29,7 @@ jobs:
           docker run -itd --name collectd-pr-test -v "${GITHUB_WORKSPACE}/collectd:/collectd" -w /collectd "${SLUG}"
       - name: Make sure collectd builds on the container
         run: |
-          docker exec -w /collectd collectd-pr-test bash -c './build.sh && ./configure && make'
+          docker exec -w /collectd collectd-pr-test bash -c './build.sh && ./configure && make -sk'
       - name: Run collectd unit tests
         continue-on-error: true
         run: |
