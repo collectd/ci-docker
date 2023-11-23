@@ -9,7 +9,7 @@ jobs:
   build_and_publish_container:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v4
       - name: Get branch name
         run: |
           export BRANCH="$(${{ github.ref }} | rev | cut -d '/' -f1 | rev )
