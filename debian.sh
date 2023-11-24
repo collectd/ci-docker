@@ -23,6 +23,8 @@ COMMON_PACKAGES="\
   valgrind \
 "
 
+sed -i 's/main$/main contrib non-free/' /etc/apt/sources.list.d/debian.sources
+
 cat << EOF > /etc/apt/apt.conf.d/50misc-opts
 APT::Install-Recommends "0";
 APT::Install-Suggests "0";

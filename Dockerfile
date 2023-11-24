@@ -12,6 +12,7 @@ ENV EXTRA_PACKAGES="\
   javahelper \
   libatasmart-dev \
   libcap-dev \
+  libcurl4-gnutls-dev \
   libdbi-dev \
   libdpdk-dev \
   libesmtp-dev \
@@ -59,6 +60,7 @@ ENV EXTRA_PACKAGES="\
   libxen-dev \
   libxml2-dev \
   libyajl-dev \
+  nvidia-cuda-dev \
   perl \
   protobuf-c-compiler \
   protobuf-compiler \
@@ -90,6 +92,9 @@ ENV SUPPORTED_PLUGIN_LIST="\
   cpufreq \
   cpusleep \
   csv \
+  curl \
+  curl_json \
+  curl_xml \
   dbi \
   df \
   disk \
