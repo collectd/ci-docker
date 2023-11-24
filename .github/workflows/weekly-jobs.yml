@@ -15,20 +15,25 @@ jobs:
       matrix:
         branch:
           # Debian
+            # Debian 12
+          - bookworm_amd64
             # Debian 11
           - bullseye_amd64
             # Debian 10
           - buster_amd64
           # Ubuntu
+            # Ubuntu 20.04
+          - focal_amd64
+            # Ubuntu 18.04
+          - bionic_amd64
             # Ubuntu 16.04
           - xenial_amd64
             # Ubuntu 14.04
           - trusty_amd64
           # Fedora
-          - fedora34_x86_64
+          - fedora36_x86_64
           # CentOS
-          - el7_x86_64
-          - el8_x86_64
+          - el9_x86_64
 
     env:
       SLUG: "collectd/ci:${{ matrix.branch }}"
