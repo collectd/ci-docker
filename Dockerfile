@@ -1,4 +1,4 @@
-FROM ubuntu:jammy
+FROM ubuntu:mantic
 
 ADD debian.sh /debian.sh
 COPY /checks/*.sh /checks/
