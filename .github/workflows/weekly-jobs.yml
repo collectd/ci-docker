@@ -1,0 +1,55 @@
+name: Weekly container builds
+
+on:
+  schedule:
+    - cron: '0 0 * * 0'
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    strategy:
+      # Don't stop other in-progress jobs when one fails
+      fail-fast: false
+      matrix:
+        branch:
+          # Debian
+            # Debian 12
+          - bookworm_amd64
+            # Debian 11
+          - bullseye_amd64
+            # Debian 10
+          - buster_amd64
+          # Ubuntu
+            # Ubuntu 20.04
+          - focal_amd64
+            # Ubuntu 18.04
+          - bionic_amd64
+            # Ubuntu 16.04
+          - xenial_amd64
+            # Ubuntu 14.04
+          - trusty_amd64
+          # Fedora
+          - fedora36_x86_64
+          # CentOS
+          - el9_x86_64
+
+    env:
+      SLUG: "collectd/ci:${{ matrix.branch }}"
+
+    steps:
+    - uses: actions/checkout@v2
+      with:
+        ref: ${{ matrix.branch }}
+    - name: Build container
+      run:
+        docker build --pull -t "${SLUG}" .
+    - run: docker inspect "${SLUG}"
+    - run: docker history "${SLUG}"
+    - name: Log into the container registry
+      uses: docker/login-action@v1
+      with:
+        username: ${{ secrets.DOCKER_USERNAME }}
+        password: ${{ secrets.DOCKER_PASSWORD }}
+    - run: docker push "${SLUG}"
