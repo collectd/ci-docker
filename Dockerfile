@@ -1,4 +1,4 @@
-FROM ubuntu:focal
+FROM ubuntu:jammy
 
 ADD debian.sh /debian.sh
 COPY /checks/*.sh /checks/
