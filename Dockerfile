@@ -47,7 +47,7 @@ ENV EXTRA_PACKAGES="\
   librdkafka-dev \
   libriemann-client-dev \
   librrd-dev \
-  libsensors4-dev \
+  libsensors-dev \
   libsigrok-dev \
   libsnmp-dev \
   libssl-dev \
