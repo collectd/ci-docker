@@ -65,7 +65,6 @@ ENV EXTRA_PACKAGES="\
   libyajl-dev \
   perl \
   protobuf-c-compiler \
-  python2-dev \
   python3-dev \
   xfslibs-dev \
 "
