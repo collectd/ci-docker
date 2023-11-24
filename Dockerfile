@@ -27,7 +27,7 @@ ENV EXTRA_PACKAGES="\
   liblua5.1-0-dev \
   liblua5.2-dev \
   liblua5.3-dev \
-  liblua50-dev \
+  liblua5.4-dev \
   liblvm2-dev \
   libmemcached-dev \
   libmicrohttpd-dev \
@@ -56,7 +56,6 @@ ENV EXTRA_PACKAGES="\
   libssl-dev \
   libstatgrab-dev \
   libtokyocabinet-dev \
-  libtokyotyrant-dev \
   libudev-dev \
   libupsclient-dev \
   libvarnish-dev \
