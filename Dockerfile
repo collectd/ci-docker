@@ -52,6 +52,7 @@ ENV EXTRA_PACKAGES="\
   libsqlite3-dev \
   libssl-dev \
   libstatgrab-dev \
+  libtirpc-dev \
   libtokyocabinet-dev \
   libudev-dev \
   libupsclient-dev \
