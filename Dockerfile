@@ -143,6 +143,7 @@ ENV SUPPORTED_PLUGIN_LIST="\
   memcachec \
   memcached \
   memory \
+  mmc \
   modbus \
   mqtt \
   multimeter \
@@ -173,6 +174,7 @@ ENV SUPPORTED_PLUGIN_LIST="\
   procevent \
   protocols \
   python \
+  ras \
   redis \
   rrdcached \
   rrdtool \
