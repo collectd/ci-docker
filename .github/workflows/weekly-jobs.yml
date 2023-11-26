@@ -22,18 +22,19 @@ jobs:
             # Debian 10
           - buster_amd64
           # Ubuntu
+            # Ubuntu 23.10
+          - mantic_amd64
+            # Ubuntu 22.04
+          - jammy_amd64
             # Ubuntu 20.04
           - focal_amd64
             # Ubuntu 18.04
           - bionic_amd64
-            # Ubuntu 16.04
-          - xenial_amd64
-            # Ubuntu 14.04
-          - trusty_amd64
-          # Fedora
-          - fedora36_x86_64
           # CentOS
           - el9_x86_64
+          # Fedora
+          - fedora39
+          - fedora38_x86_64
 
     env:
       SLUG: "collectd/ci:${{ matrix.branch }}"
