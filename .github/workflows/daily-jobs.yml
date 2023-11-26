@@ -2,7 +2,7 @@ name: Daily container builds
 
 on:
   schedule:
-    - cron: '0 0 * * *'
+    - cron: '49 7 * * *'
 
 jobs:
   build:
@@ -16,7 +16,8 @@ jobs:
       matrix:
         branch:
           - sid_amd64
-          - fedora34_x86_64 
+          - fedora38_x86_64
+          - fedora_rawhide_x86_64
 
     env:
       SLUG: "collectd/ci:${{ matrix.branch }}"
