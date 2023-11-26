@@ -2,7 +2,7 @@ name: Weekly container builds
 
 on:
   schedule:
-    - cron: '0 0 * * 0'
+    - cron: '32 6 * * 0'
 
 jobs:
   build:
