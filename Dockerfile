@@ -55,7 +55,6 @@ ENV EXTRA_PACKAGES="\
   libsnmp-dev \
   libssl-dev \
   libstatgrab-dev \
-  libtokyocabinet-dev \
   libudev-dev \
   libupsclient-dev \
   libvarnish-dev \
@@ -142,6 +141,7 @@ ENV SUPPORTED_PLUGIN_LIST="\
   memcachec \
   memcached \
   memory \
+  mmc \
   modbus \
   mqtt \
   multimeter \
@@ -198,7 +198,6 @@ ENV SUPPORTED_PLUGIN_LIST="\
   ted \
   thermal \
   threshold \
-  tokyotyrant \
   turbostat \
   ubi \
   unixsock \
