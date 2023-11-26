@@ -11,7 +11,7 @@ ENV EXTRA_PACKAGES="\
   hiredis-devel \
   intel-cmt-cat-devel \
   iproute-devel \
-  iptables-devel \
+  iptables-legacy-devel \
   jansson-devel \
   java-1.8.0-openjdk-devel \
   java-devel \
@@ -57,7 +57,6 @@ ENV SUPPORTED_PLUGIN_LIST="\
   libcollectdclient \
   aggregation \
   amqp \
-  amqp1 \
   apache \
   apcups \
   ascent \
@@ -125,6 +124,7 @@ ENV SUPPORTED_PLUGIN_LIST="\
   memcachec \
   memcached \
   memory \
+  mmc \
   mqtt \
   multimeter \
   mysql \
