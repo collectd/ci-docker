@@ -2,6 +2,7 @@ FROM debian:bookworm
 
 ADD debian.sh /debian.sh
 COPY /checks/*.sh /checks/
+COPY /expected-plugins/* /expected-plugins/
 
 ENV EXTRA_PACKAGES="\
   default-jdk \
