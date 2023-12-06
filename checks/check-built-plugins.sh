@@ -3,9 +3,16 @@
 set -e
 
 declare -A want
-for p in ${SUPPORTED_PLUGIN_LIST}; do
-  want["${p}"]=1
-done
+if [[ $# -ge 1 ]]; then
+  while [[ $# -ge 1 ]]; do
+    want["${1}"]=1
+    shift
+  done
+else
+  for p in ${SUPPORTED_PLUGIN_LIST}; do
+    want["${p}"]=1
+  done
+fi
 
 declare -A got
 for f in .libs/*.so; do
