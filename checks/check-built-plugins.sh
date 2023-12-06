@@ -4,9 +4,8 @@ set -e
 
 declare -A want
 if [[ $# -ge 1 ]]; then
-  while [[ $# -ge 1 ]]; do
-    want["${1}"]=1
-    shift
+  for p in $(egrep -v '^ *($|#)' "${1}"); do
+    want["${p}"]=1
   done
 else
   for p in ${SUPPORTED_PLUGIN_LIST}; do
