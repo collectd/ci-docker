@@ -4,7 +4,7 @@ set -e
 
 declare -A want
 if [[ $# -ge 1 ]]; then
-  for p in $(egrep -v '^ *($|#)' "${1}"); do
+  for p in $(grep -E -v '^ *($|#)' "${1}"); do
     want["${p}"]=1
   done
 else
