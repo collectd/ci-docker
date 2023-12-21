@@ -3,9 +3,16 @@
 set -e
 
 declare -A want
-for p in ${SUPPORTED_PLUGIN_LIST}; do
-  want["${p}"]=1
-done
+if [[ $# -ge 1 ]]; then
+  for p in $(egrep -v '^ *($|#)' "${1}"); do
+    want["${p}"]=1
+  done
+else
+  echo "No plugins on the command line; using SUPPORTED_PLUGIN_LIST instead."
+  for p in ${SUPPORTED_PLUGIN_LIST}; do
+    want["${p}"]=1
+  done
+fi
 
 declare -A got
 for f in .libs/*.so; do
