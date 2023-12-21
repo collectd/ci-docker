@@ -8,6 +8,7 @@ if [[ $# -ge 1 ]]; then
     want["${p}"]=1
   done
 else
+  echo "No plugins on the command line; using SUPPORTED_PLUGIN_LIST instead."
   for p in ${SUPPORTED_PLUGIN_LIST}; do
     want["${p}"]=1
   done
