@@ -1,32 +1,45 @@
-#!/bin/sh -e
+#!/bin/bash
 
-echo "### Checking whether all known working plugins on this platform have been built ###"
-STATUS=0
-for i in ${SUPPORTED_PLUGIN_LIST}; do
-  echo "$i plugin:"
-  if test -f "src/$i.c"; then
-    if test -f ."libs/${i}.so"; then
-      ldd ".libs/${i}.so" || STATUS=1
-    else
-      ldd "src/.libs/${i}.so" || STATUS=1
-    fi
-  else
-    echo "... doesn't exist in this version"
-  fi
-done
+set -e
 
-echo "### Looking for any plugins previously unsupported on this platform ###"
-for i in .libs/*.so src/libs/*.so; do
-  plugin="$(basename $i)"
-  [ "${plugin}" = '*.so' ] && continue
-  FOUND=0
-  for j in ${SUPPORTED_PLUGIN_LIST}; do
-    [ "x${plugin}" = "x${j}.so" ] && FOUND=1
+declare -A want
+if [[ $# -ge 1 ]]; then
+  for p in $(egrep -v '^ *($|#)' "${1}"); do
+    want["${p}"]=1
   done
-  if [ $FOUND -eq 0 ]; then
-    echo "found this new plugin: ${plugin}"
-    ldd "${i}"
+else
+  echo "No plugins on the command line; using SUPPORTED_PLUGIN_LIST instead."
+  for p in ${SUPPORTED_PLUGIN_LIST}; do
+    want["${p}"]=1
+  done
+fi
+
+declare -A got
+for f in .libs/*.so; do
+  p="$(basename "${f}" .so)"
+
+  if [[ -v want["${p}"] ]]; then
+    unset want["${p}"]
+    continue
   fi
+
+  got["${p}"]=1
 done
 
-exit $STATUS
+if [[ ${#got[@]} > 0 ]]; then
+  echo "## The following EXTRA plugins were built:"
+  echo ""
+  for p in "${!got[@]}"; do
+    echo " *  ${p}"
+  done | sort
+  echo ""
+fi
+
+if [[ ${#want[@]} > 0 ]]; then
+  echo "## The following expected plugins are MISSING:"
+  echo ""
+  for p in "${!want[@]}"; do
+    echo " *  ${p}"
+  done | sort
+  exit 1
+fi

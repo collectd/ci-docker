@@ -1,0 +1,37 @@
+name: PR jobs
+
+on:
+  pull_request:
+    branches-ignore:
+      - main
+
+jobs:
+  # Build and test container for each PR submitted to that branch
+  build_and_test_container:
+
+    runs-on: ubuntu-latest
+    env:
+      SLUG: "collectd/ci:test"
+      VALGRIND_OPTS: "--errors-for-leak-kinds=definite"
+    steps:
+      - uses: actions/checkout@v4
+      - name: Build container
+        run: docker build -t "${SLUG}" .
+      - name: Inspect container
+        run: docker inspect "${SLUG}"
+      - name: Check out the latest verison of collectd
+        uses: actions/checkout@v4
+        with:
+          repository: collectd/collectd
+          ref: main
+          path: ${{ github.workspace }}/collectd
+      - name: Create the test container
+        run: |
+          docker run -itd --name collectd-pr-test -v "${GITHUB_WORKSPACE}/collectd:/collectd" -w /collectd "${SLUG}"
+      - name: Make sure collectd builds on the container
+        run: |
+          docker exec -w /collectd collectd-pr-test bash -c './build.sh && ./configure && make -sk'
+      - name: Run collectd unit tests
+        continue-on-error: true
+        run: |
+          docker exec -w /collectd collectd-pr-test make check
