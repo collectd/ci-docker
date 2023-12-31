@@ -12,6 +12,7 @@ COMMON_PACKAGES="\
   flex \
   gcc \
   gdb \
+  gh \
   git \
   libc6-dev \
   libtool \
