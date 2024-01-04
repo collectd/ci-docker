@@ -6,34 +6,21 @@ on:
 
 jobs:
   build:
-
     runs-on: ubuntu-latest
-
     strategy:
       # Don't stop other in-progress jobs when one fails
       fail-fast: false
       matrix:
         branch:
-          # Debian
-            # Debian 12
-          - bookworm_amd64
-            # Debian 11
-          - bullseye_amd64
-            # Debian 10
-          - buster_amd64
-          # Ubuntu
-            # Ubuntu 20.04
-          - focal_amd64
-            # Ubuntu 18.04
-          - bionic_amd64
-            # Ubuntu 16.04
-          - xenial_amd64
-            # Ubuntu 14.04
-          - trusty_amd64
-          # Fedora
-          - fedora36_x86_64
-          # CentOS
-          - el9_x86_64
+          - debian12
+          - debian11
+          - debian10
+          - ubuntu23.10
+          - ubuntu22.04
+          - ubuntu20.04
+          - fedora39
+          - fedora38
+          - centos9
 
     env:
       SLUG: "collectd/ci:${{ matrix.branch }}"
