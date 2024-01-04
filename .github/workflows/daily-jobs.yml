@@ -6,18 +6,14 @@ on:
 
 jobs:
   build:
-
     runs-on: ubuntu-latest
-
     strategy:
       # Don't stop other in-progress jobs when one fails
       fail-fast: false
-
       matrix:
         branch:
           - debian_unstable
-          - fedora38_x86_64
-          - fedora_rawhide_x86_64
+          - fedora_main
 
     env:
       SLUG: "collectd/ci:${{ matrix.branch }}"
