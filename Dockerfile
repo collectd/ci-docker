@@ -38,6 +38,7 @@ ENV EXTRA_PACKAGES="\
   mariadb-devel \
   net-snmp-devel \
   nut-devel \
+  oneapi-level-zero-devel \
   openldap-devel \
   owfs-devel \
   perl-ExtUtils-Embed \
