@@ -9,6 +9,7 @@ ENV EXTRA_PACKAGES="\
   clang-18 \
   default-jdk \
   default-libmysqlclient-dev \
+  epics-dev \
   gcc \
   gcc-10 \
   intel-cmt-cat \
