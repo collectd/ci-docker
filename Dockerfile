@@ -24,14 +24,14 @@ ENV EXTRA_PACKAGES="\
   libgcrypt20-dev \
   libglib2.0-dev \
   libgps-dev \
+  libgrpc++-dev \
   libhiredis-dev \
   libi2c-dev \
   libiptc-dev \
   libjansson-dev \
   libldap2-dev \
   libltdl-dev \
-  liblua5.1-0-dev \
-  liblua5.2-dev \
+  liblua5.3-dev \
   liblvm2-dev \
   libmemcached-dev \
   libmicrohttpd-dev \
@@ -47,6 +47,7 @@ ENV EXTRA_PACKAGES="\
   libperl-dev \
   libpq-dev \
   libprotobuf-c-dev \
+  libprotobuf-dev \
   libqpid-proton11-dev \
   librabbitmq-dev \
   librdkafka-dev \
@@ -64,11 +65,15 @@ ENV EXTRA_PACKAGES="\
   libxen-dev \
   libxml2-dev \
   libyajl-dev \
+  libze-dev \
+  linux-libc-dev \
   nvidia-cuda-dev \
   perl \
   protobuf-c-compiler \
   protobuf-compiler \
+  protobuf-compiler-grpc \
   python3-dev \
+  riemann-c-client \
   xfslibs-dev \
 "
 
