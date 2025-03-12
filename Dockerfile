@@ -19,6 +19,7 @@ ENV EXTRA_PACKAGES="\
   jpackage-utils \
   libatasmart-devel \
   libcap-devel \
+  libchrony-devel \
   libcurl-devel \
   libdbi-devel \
   libesmtp-devel \
