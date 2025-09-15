@@ -30,7 +30,7 @@ COMMON_PACKAGES="\
 
 grep -q ^Fedora /etc/redhat-release && alias yum=dnf || true
 
-yum -y --skip-broken update
+yum -y update
 
 yum -y install $COMMON_PACKAGES $EXTRA_PACKAGES
 
