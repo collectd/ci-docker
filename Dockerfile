@@ -4,19 +4,14 @@ ADD debian.sh /debian.sh
 COPY /checks/*.sh /checks/
 
 ENV EXTRA_PACKAGES="\
-  clang \
-  clang-17 \
-  clang-18 \
   default-jdk \
   default-libmysqlclient-dev \
   epics-dev \
-  gcc \
-  gcc-10 \
   intel-cmt-cat \
   javahelper \
   libatasmart-dev \
   libcap-dev \
-  libcurl4-gnutls-dev \
+  libcurl4-openssl-dev \
   libdbi-dev \
   libdpdk-dev \
   libesmtp-dev \
